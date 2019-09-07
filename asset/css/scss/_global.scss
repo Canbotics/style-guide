@@ -1,0 +1,66 @@
+html {
+    font-size: 62.5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        font-size: 1.6rem;
+    }
+}
+
+h4 {
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.2em;
+}
+
+main {
+    flex-grow: 1;
+    max-width: calc(#{map-get($list_widths, 'site')} + 2em);
+    margin: auto;
+    padding-bottom: 1em;
+
+    > section {
+        margin-top: 2em;
+
+        > header {
+            margin: auto auto .75em;
+
+            > div {
+                padding: 0 1em;
+                background: linear-gradient(#FFF 0px, #FFF 45%, map-get(map-get($list_colors, 'grey'), 'trim') 49%, map-get(map-get($list_colors, 'grey'), 'trim')51%, #FFF 55%, #FFF 100%);
+            }
+
+            h2 {
+                display: inline-block;
+                margin: 0;
+                padding: 0 .25em;
+                background-color: #FFF;
+            }
+
+            p {
+                padding: 0 2em;
+
+                &:first-of-type {
+                    margin-top: .25em;
+                }
+            }
+        }
+    }
+}
+
+header#sitehead {
+    background-color: #DDD;
+    height: 50px;
+}
+
+footer#sitefoot {
+    background-color: #DDD;
+    height: 200px;
+}
