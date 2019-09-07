@@ -17,6 +17,7 @@ p {
 
 main {
   flex-grow: 1;
+  width: 100%;
   max-width: calc(1040px + 2em);
   margin: auto;
   padding-bottom: 1em; }
