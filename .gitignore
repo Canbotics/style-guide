@@ -1,0 +1,5 @@
+# Environment
+.env
+
+# SASS
+.sass-cache
