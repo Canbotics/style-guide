@@ -84,16 +84,23 @@ footer#sitefoot {
     .struc.coln header {
       display: flex;
       flex-direction: column-reverse; }
-      .struc.coln header h3, .struc.coln header h4 {
-        margin: .75em 0 .25em; }
-      .struc.coln header img {
-        display: block;
-        width: 100%;
-        height: auto; }
+    .struc.coln h3, .struc.coln h4 {
+      margin: .75em 0 .25em; }
+    .struc.coln img {
+      display: block;
+      width: 100%;
+      height: auto; }
     .struc.coln header + div > :first-child {
       margin-top: 0; }
     .struc.coln footer {
       margin-top: auto; }
+    @media (max-width: 512px) {
+      .struc.coln {
+        padding: 0; }
+        .struc.coln h3, .struc.coln h4 {
+          margin: .75em 16px .25em; }
+        .struc.coln header + div, .struc.coln footer {
+          margin: 0 16px; } }
 
 .comp:not(.full) {
   padding: 0 16px; }

@@ -65,16 +65,16 @@
         header {
             display: flex;
             flex-direction: column-reverse;
+        }
 
-            h3, h4 {
-                margin: .75em 0 .25em;
-            }
+        h3, h4 {
+            margin: .75em 0 .25em;
+        }
 
-            img {
-                display: block;
-                width: 100%;
-                height: auto;
-            }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
         }
 
         header + div {
@@ -87,5 +87,16 @@
             margin-top: auto;
         }
 
+        @media(max-width: 512px) {
+            padding: 0;
+
+            h3, h4 {
+                margin: .75em 16px .25em;
+            }
+
+            header + div, footer {
+                margin: 0 16px;
+            }
+        }
     }
 }
