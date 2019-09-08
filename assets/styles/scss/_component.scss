@@ -1,9 +1,29 @@
-.struc {
-    margin-top: 2em;
-
+.comp {
     &:not(.full) {
         padding: 0 16px;
     }
+
+    + .comp {
+        margin-top: 2em;
+    }
+
+    &.subsection {
+        h3 {
+            margin: .75em 0 .25em;
+        }
+
+        p:first-of-type {
+            margin-top: 0;
+        }
+
+        + .comp {
+            margin-top: 1em;
+        }
+    }
+
+    + .subsection {
+        margin-top: 3em;
+    }    
 
     &.coln {
         display: grid;
@@ -99,4 +119,9 @@
             }
         }
     }
+
+
+
 }
+
+
