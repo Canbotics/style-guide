@@ -1,0 +1,44 @@
+$widths: (
+    'site': 1040px
+);
+
+$colors: (
+    'theme': (
+        'primary': #F00,
+        'secondary': #0F0,
+        'tertiary': #00F,
+    ),
+    'grey': (
+        'trim': rgb(31, 29, 36)
+    )
+);
+
+
+
+// $list_roles: 'dps', 'tank', 'support', 'caster';
+// $list_roles_colors: (
+//     'dps': (
+//         'trim': rgb(245, 52, 52)
+//     ),
+//     'tank': (
+//         'trim': rgb(52, 52, 245)
+//     ),
+//     'support': (
+//         'trim': rgb(52, 245, 52)
+//     ),
+//     'caster': (
+//         'trim': rgb(112, 16, 236)
+//     )
+// );
+
+// $list_roles_colors: (
+//     'dps': rgb(245, 52, 52),
+//     'tank': rgb(52, 52, 245),
+//     'support': rgb(52, 245, 52),
+//     'caster': rgb(112, 16, 236)
+// );
+
+
+
+
+@import 'structure', 'global', 'component';

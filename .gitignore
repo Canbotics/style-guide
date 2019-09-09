@@ -3,3 +3,7 @@
 
 # SASS
 .sass-cache
+
+# Assets
+assets/images
+assets/images/*
