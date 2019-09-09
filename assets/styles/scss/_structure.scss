@@ -15,7 +15,7 @@ html {
 main {
     flex-grow: 1;
     width: 100%;
-    max-width: calc(#{map-get($list_widths, 'site')} + 2em);
+    max-width: calc(#{map-get($widths, 'site')} + 2em);
     margin: auto;
     padding-bottom: 1em;
 
@@ -27,7 +27,7 @@ main {
 
             > div {
                 padding: 0 1em;
-                background: linear-gradient(#FFF 0px, #FFF 45%, map-get(map-get($list_colors, 'grey'), 'trim') 49%, map-get(map-get($list_colors, 'grey'), 'trim')51%, #FFF 55%, #FFF 100%);
+                background: linear-gradient(#FFF 0px, #FFF 45%, map-get(map-get($colors, 'grey'), 'trim') 49%, map-get(map-get($colors, 'grey'), 'trim')51%, #FFF 55%, #FFF 100%);
             }
 
             h2 {

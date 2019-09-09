@@ -6,3 +6,34 @@ p {
     line-height: 1.2em;
 }
 
+.btn {
+    display: inline-block;
+    margin: .5em auto 0;
+    padding: .5em 1em;
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+    border: 3px solid #000;
+
+    @each $tier, $color in map-get($colors, 'theme') {
+        &.#{$tier} {
+            border-color: $color;
+            background-color: $color;
+
+            &:hover, &:focus {
+                color: $color;
+                background-color: #FFF;
+            }
+        }
+        &.#{$tier}.inv {
+            border-color: $color;
+            background-color: #FFF;
+            color: $color;
+
+            &:hover, &:focus {
+                color: #FFF;
+                background-color: $color;
+            }
+        }
+    }
+}

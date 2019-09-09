@@ -46,6 +46,54 @@ h4 {
 p {
   line-height: 1.2em; }
 
+.btn {
+  display: inline-block;
+  margin: .5em auto 0;
+  padding: .5em 1em;
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  border: 3px solid #000; }
+  .btn.primary {
+    border-color: #F00;
+    background-color: #F00; }
+    .btn.primary:hover, .btn.primary:focus {
+      color: #F00;
+      background-color: #FFF; }
+  .btn.primary.inv {
+    border-color: #F00;
+    background-color: #FFF;
+    color: #F00; }
+    .btn.primary.inv:hover, .btn.primary.inv:focus {
+      color: #FFF;
+      background-color: #F00; }
+  .btn.secondary {
+    border-color: #0F0;
+    background-color: #0F0; }
+    .btn.secondary:hover, .btn.secondary:focus {
+      color: #0F0;
+      background-color: #FFF; }
+  .btn.secondary.inv {
+    border-color: #0F0;
+    background-color: #FFF;
+    color: #0F0; }
+    .btn.secondary.inv:hover, .btn.secondary.inv:focus {
+      color: #FFF;
+      background-color: #0F0; }
+  .btn.tertiary {
+    border-color: #00F;
+    background-color: #00F; }
+    .btn.tertiary:hover, .btn.tertiary:focus {
+      color: #00F;
+      background-color: #FFF; }
+  .btn.tertiary.inv {
+    border-color: #00F;
+    background-color: #FFF;
+    color: #00F; }
+    .btn.tertiary.inv:hover, .btn.tertiary.inv:focus {
+      color: #FFF;
+      background-color: #00F; }
+
 .comp:not(.full) {
   padding: 0 16px; }
 .comp + .comp {
