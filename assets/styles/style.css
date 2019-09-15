@@ -60,10 +60,12 @@ header#sitehead {
     margin: auto; }
   header#sitehead nav {
     align-self: flex-end;
-    display: flex; }
+    display: flex;
+    color: #000; }
     header#sitehead nav a {
       display: block;
-      padding: 1em .75em; }
+      padding: 1em .75em;
+      color: inherit; }
       header#sitehead nav a.active::before {
         content: "";
         position: absolute;
@@ -71,9 +73,6 @@ header#sitehead {
         left: 0;
         right: 0;
         height: 2px;
-        background-color: rgba(0, 0, 0, 0.7); }
-      header#sitehead nav a[aria-current=page] {
-        color: #FFF;
         background-color: rgba(0, 0, 0, 0.7); }
     header#sitehead nav > ul {
       display: flex; }
@@ -86,6 +85,7 @@ header#sitehead {
     header#sitehead ul li {
       white-space: nowrap; }
       header#sitehead ul li:hover > a, header#sitehead ul li:focus-within > a {
+        color: inherit;
         background-color: rgba(0, 0, 0, 0.2); }
       header#sitehead ul li:hover ul, header#sitehead ul li:focus-within ul {
         display: flex;
@@ -96,6 +96,9 @@ header#sitehead {
       position: absolute;
       right: 0;
       background-color: #DDD; }
+      header#sitehead ul ul [aria-current=page] {
+        color: #FFF;
+        background-color: rgba(0, 0, 0, 0.7); }
 
 footer#sitefoot {
   height: 200px;
