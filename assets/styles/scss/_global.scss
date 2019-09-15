@@ -37,3 +37,7 @@ p {
         }
     }
 }
+
+.vishide {
+    @include visual-hide;
+}

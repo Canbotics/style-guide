@@ -10,8 +10,21 @@ $colors: (
     ),
     'grey': (
         'trim': rgb(31, 29, 36)
+    ),
+    'backgrounds': (
+        'sitehead': #DDD,
+        'sitemain': none,
+        'sitefoot': #DDD
     )
 );
+
+@mixin visual-hide {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: -1;
+    clip-path: polygon(0 0)
+}
 
 
 
