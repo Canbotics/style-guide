@@ -40,14 +40,6 @@ header#sitehead {
   align-items: center;
   padding: 0 .5em;
   background-color: #DDD; }
-  header#sitehead div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 60px;
-    max-width: calc(1040px + 2em);
-    margin: auto; }
   header#sitehead h1 {
     margin: 0; }
   header#sitehead h2 {
@@ -56,18 +48,37 @@ header#sitehead {
     height: 0;
     margin: -1;
     clip-path: polygon(0 0); }
+  header#sitehead a {
+    text-decoration: none; }
+  header#sitehead div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    max-width: calc(1040px + 2em);
+    margin: auto; }
   header#sitehead nav {
     align-self: flex-end;
     display: flex; }
+    header#sitehead nav a {
+      display: block;
+      padding: 1em .75em; }
+      header#sitehead nav a.active::before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: rgba(0, 0, 0, 0.7); }
+      header#sitehead nav a[aria-current=page] {
+        color: #FFF;
+        background-color: rgba(0, 0, 0, 0.7); }
     header#sitehead nav > ul {
       display: flex; }
       header#sitehead nav > ul > li {
         position: relative; }
-      header#sitehead nav > ul ul {
-        display: none;
-        position: absolute;
-        right: 0;
-        background-color: #DDD; }
   header#sitehead ul {
     margin: 0;
     padding: 0;
@@ -75,14 +86,16 @@ header#sitehead {
     header#sitehead ul li {
       white-space: nowrap; }
       header#sitehead ul li:hover > a, header#sitehead ul li:focus-within > a {
-        background-color: #c7c7c7; }
+        background-color: rgba(0, 0, 0, 0.2); }
       header#sitehead ul li:hover ul, header#sitehead ul li:focus-within ul {
         display: flex;
-        flex-direction: column; }
-    header#sitehead ul a {
-      display: block;
-      padding: 1em .75em;
-      text-decoration: none; }
+        flex-direction: column;
+        min-width: 100%; }
+    header#sitehead ul ul {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: #DDD; }
 
 footer#sitefoot {
   height: 200px;
@@ -141,6 +154,13 @@ p {
     .btn.tertiary.inv:hover, .btn.tertiary.inv:focus {
       color: #FFF;
       background-color: #00F; }
+
+.vishide {
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: -1;
+  clip-path: polygon(0 0); }
 
 .comp:not(.full) {
   padding: 0 16px; }
