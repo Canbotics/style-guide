@@ -15,6 +15,9 @@ main {
   max-width: calc(1040px + 2em);
   margin: auto;
   padding-bottom: 1em; }
+  main > header {
+    max-width: calc(100vw - 1em);
+    margin: auto; }
   main > section {
     margin-top: 2em; }
     main > section > header {
@@ -25,7 +28,7 @@ main {
       main > section > header h2 {
         display: inline-block;
         margin: 0;
-        padding: 0 .25em;
+        padding: 0 6px;
         background-color: #FFF; }
       main > section > header p {
         padding: 0 2em; }
@@ -33,12 +36,57 @@ main {
           margin-top: .25em; }
 
 header#sitehead {
-  background-color: #DDD;
-  height: 50px; }
+  display: flex;
+  align-items: center;
+  padding: 0 .5em;
+  background-color: #DDD; }
+  header#sitehead div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    max-width: calc(1040px + 2em);
+    margin: auto; }
+  header#sitehead h1 {
+    margin: 0; }
+  header#sitehead h2 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: -1;
+    clip-path: polygon(0 0); }
+  header#sitehead nav {
+    align-self: flex-end;
+    display: flex; }
+    header#sitehead nav > ul {
+      display: flex; }
+      header#sitehead nav > ul > li {
+        position: relative; }
+      header#sitehead nav > ul ul {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #DDD; }
+  header#sitehead ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+    header#sitehead ul li {
+      white-space: nowrap; }
+      header#sitehead ul li:hover > a, header#sitehead ul li:focus-within > a {
+        background-color: #c7c7c7; }
+      header#sitehead ul li:hover ul, header#sitehead ul li:focus-within ul {
+        display: flex;
+        flex-direction: column; }
+    header#sitehead ul a {
+      display: block;
+      padding: 1em .75em;
+      text-decoration: none; }
 
 footer#sitefoot {
-  background-color: #DDD;
-  height: 200px; }
+  height: 200px;
+  background-color: #DDD; }
 
 h4 {
   font-weight: 600; }
