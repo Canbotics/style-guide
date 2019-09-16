@@ -15,7 +15,7 @@ html {
 main {
     flex-grow: 1;
     width: 100%;
-    max-width: calc(#{map-get($widths, 'site')} + 2em);
+    max-width: calc(#{$siteWidth} + 2em);
     margin: auto;
     padding-bottom: 1em;
 
@@ -58,14 +58,14 @@ header#sitehead {
     display: flex;
     align-items: center;
     padding: 0 .5em;
-    background-color: map-get(map-get($colors, 'backgrounds'), 'sitehead');
+    background-color: map-get(map-get($colors, 'backgrounds'), 'siteHead');
 
     h1 {
         margin: 0;
     }
 
     h2 {
-        @include visual-hide;
+        @include visualHide;
     }
 
     a {
@@ -78,7 +78,7 @@ header#sitehead {
         align-items: center;
         width: 100%;
         height: 60px;
-        max-width: calc(#{map-get($widths, 'site')} + 2em);
+        max-width: calc(#{$siteWidth} + 2em);
         margin: auto;   
     }
 
@@ -142,7 +142,7 @@ header#sitehead {
             display: none;
             position: absolute;
             right: 0;
-            background-color: map-get(map-get($colors, 'backgrounds'), 'sitehead');
+            background-color: map-get(map-get($colors, 'backgrounds'), 'siteHead');
 
             [aria-current=page] {
                 color: #FFF;
@@ -154,5 +154,5 @@ header#sitehead {
 
 footer#sitefoot {
     height: 200px;
-    background-color: #DDD;
+    background-color: map-get(map-get($colors, 'backgrounds'), 'siteFoot');
 }

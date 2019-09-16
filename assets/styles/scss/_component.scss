@@ -27,7 +27,7 @@
 
     &.coln {
         display: grid;
-        grid-gap: 32px 16px;
+        grid-gap: map-get($gridGap, 'row' ) map-get($gridGap, 'column' );
 
         &.col2 {
             @media(min-width: 545px) {
@@ -62,7 +62,7 @@
                 &.col12 {
                     grid-template-columns: repeat(3, 1fr);
 
-                    > div:last-child {
+                    > :last-child {
                         grid-column: 2/span 2
                     }
                 }
@@ -70,7 +70,7 @@
                 &.col21 {
                     grid-template-columns: repeat(3, 1fr);
 
-                    > div:first-child {
+                    > :first-child {
                         grid-column: 1/span 2
                     }
                 }
@@ -120,8 +120,145 @@
         }
     }
 
+    &.txtwimg {
+        display: grid;
+        grid-gap: 0 map-get($gridGap, 'column' );
 
+        h3, h4 {
+            margin: 0 0 .25em;
+        }
 
+        header + div {
+            > :first-child {
+                margin-top: 0;
+            }
+        }
+
+        picture {
+            display: block;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        > :first-child {
+            grid-row: 2;
+            align-self: center;
+        }
+
+        > :last-child {
+            grid-row: 1;
+        }
+
+        &.col2 {
+            @media(min-width: 545px) {
+                grid-template-columns: repeat(3, 1fr);
+ 
+                > :first-child {
+                    grid-row: 1;
+                    grid-column: 1 / span 2;
+                }
+
+                &.inv {
+                    > :first-child {
+                        grid-column: 2 / span 2;
+                    }
+                }
+            }
+
+            @media(min-width: 787px) {
+                grid-template-columns: repeat(2, 1fr);
+
+                > :first-child {
+                    grid-column: 1;
+                }
+
+                &.inv {
+                    > :first-child {
+                        grid-column: 2;
+                    }
+                }
+            }
+        }
+
+        &.col3 {
+            @media(min-width: 545px) {
+                grid-template-columns: repeat(2, 1fr);
+
+                &.col12 {                    
+                    > :first-child {
+                        grid-row: 1;
+
+                    }
+
+                    &.inv {
+                        > :last-child {
+                            grid-column: 1;
+                        }
+                    }
+                }
+
+                &.col21 {
+                    grid-template-columns: repeat(3, 1fr);
+    
+                    > :first-child {
+                        grid-row: 1;
+                        grid-column: 1 / span 2;
+                    }
+
+                    &.inv {
+                        > :first-child {
+                            grid-column: 2 / span 2;
+                        }
+                    }
+                }
+            }
+
+            @media(min-width: 787px) {
+                grid-template-columns: repeat(3, 1fr);
+
+                &.col12 {
+                    > :last-child {
+                        grid-column: 2 / span 2;
+
+                    }
+
+                    &.inv {
+                        > :last-child {
+                            grid-column: 1 / span 2;
+                        }
+                    }
+                }
+
+                &.col21 {
+                    grid-template-columns: repeat(3, 1fr);
+
+                    > :first-child {
+                        grid-column: 1/span 2
+                    }
+                }
+            }
+        }
+
+        @media(max-width: 544px) {
+            h3, h4 {
+                margin-top: .75em;
+            }
+        }
+
+        @media(max-width: 512px) {
+            padding: 0;
+
+            h3, h4 {
+                margin: .75em 16px .25em;
+            }
+
+            header + div, footer {
+                margin: 0 16px;
+            }
+        }
+    }
 }
-
-

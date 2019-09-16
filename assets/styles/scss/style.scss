@@ -1,5 +1,7 @@
-$widths: (
-    'site': 1040px
+$siteWidth: 1040px;
+$gridGap: (
+    'row': 32px,
+    'column': 16px
 );
 
 $colors: (
@@ -12,13 +14,13 @@ $colors: (
         'trim': rgb(31, 29, 36)
     ),
     'backgrounds': (
-        'sitehead': #DDD,
-        'sitemain': none,
-        'sitefoot': #DDD
+        'siteHead': #DDD,
+        'siteMain': none,
+        'siteFoot': #DDD
     )
 );
 
-@mixin visual-hide {
+@mixin visualHide {
     position: absolute;
     width: 0;
     height: 0;
