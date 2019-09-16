@@ -199,11 +199,11 @@ p {
   @media (min-width: 787px) {
     .comp.coln.col3.col12 {
       grid-template-columns: repeat(3, 1fr); }
-      .comp.coln.col3.col12 > div:last-child {
+      .comp.coln.col3.col12 > :last-child {
         grid-column: 2/span 2; }
     .comp.coln.col3.col21 {
       grid-template-columns: repeat(3, 1fr); }
-      .comp.coln.col3.col21 > div:first-child {
+      .comp.coln.col3.col21 > :first-child {
         grid-column: 1/span 2; } }
   .comp.coln > div {
     display: flex;
@@ -227,6 +227,74 @@ p {
       .comp.coln h3, .comp.coln h4 {
         margin: .75em 16px .25em; }
       .comp.coln header + div, .comp.coln footer {
+        margin: 0 16px; } }
+.comp.txtwimg {
+  display: grid;
+  grid-gap: 0 16px; }
+  .comp.txtwimg h3, .comp.txtwimg h4 {
+    margin: 0 0 .25em; }
+  .comp.txtwimg header + div > :first-child {
+    margin-top: 0; }
+  .comp.txtwimg picture {
+    display: block; }
+  .comp.txtwimg img {
+    display: block;
+    width: 100%;
+    height: auto; }
+  .comp.txtwimg > :first-child {
+    grid-row: 2;
+    align-self: center; }
+  .comp.txtwimg > :last-child {
+    grid-row: 1; }
+  @media (min-width: 545px) {
+    .comp.txtwimg.col2 {
+      grid-template-columns: repeat(3, 1fr); }
+      .comp.txtwimg.col2 > :first-child {
+        grid-row: 1;
+        grid-column: 1 / span 2; }
+      .comp.txtwimg.col2.inv > :first-child {
+        grid-column: 2 / span 2; } }
+  @media (min-width: 787px) {
+    .comp.txtwimg.col2 {
+      grid-template-columns: repeat(2, 1fr); }
+      .comp.txtwimg.col2 > :first-child {
+        grid-column: 1; }
+      .comp.txtwimg.col2.inv > :first-child {
+        grid-column: 2; } }
+  @media (min-width: 545px) {
+    .comp.txtwimg.col3 {
+      grid-template-columns: repeat(2, 1fr); }
+      .comp.txtwimg.col3.col12 > :first-child {
+        grid-row: 1; }
+      .comp.txtwimg.col3.col12.inv > :last-child {
+        grid-column: 1; }
+      .comp.txtwimg.col3.col21 {
+        grid-template-columns: repeat(3, 1fr); }
+        .comp.txtwimg.col3.col21 > :first-child {
+          grid-row: 1;
+          grid-column: 1 / span 2; }
+        .comp.txtwimg.col3.col21.inv > :first-child {
+          grid-column: 2 / span 2; } }
+  @media (min-width: 787px) {
+    .comp.txtwimg.col3 {
+      grid-template-columns: repeat(3, 1fr); }
+      .comp.txtwimg.col3.col12 > :last-child {
+        grid-column: 2 / span 2; }
+      .comp.txtwimg.col3.col12.inv > :last-child {
+        grid-column: 1 / span 2; }
+      .comp.txtwimg.col3.col21 {
+        grid-template-columns: repeat(3, 1fr); }
+        .comp.txtwimg.col3.col21 > :first-child {
+          grid-column: 1/span 2; } }
+  @media (max-width: 544px) {
+    .comp.txtwimg h3, .comp.txtwimg h4 {
+      margin-top: .75em; } }
+  @media (max-width: 512px) {
+    .comp.txtwimg {
+      padding: 0; }
+      .comp.txtwimg h3, .comp.txtwimg h4 {
+        margin: .75em 16px .25em; }
+      .comp.txtwimg header + div, .comp.txtwimg footer {
         margin: 0 16px; } }
 
 /*# sourceMappingURL=style.css.map */
