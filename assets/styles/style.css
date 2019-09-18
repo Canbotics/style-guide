@@ -248,16 +248,9 @@ p {
     grid-row: 1; }
   @media (min-width: 545px) {
     .comp.txtwimg.col2 {
-      grid-template-columns: repeat(3, 1fr); }
-      .comp.txtwimg.col2 > :first-child {
-        grid-row: 1;
-        grid-column: 1 / span 2; }
-      .comp.txtwimg.col2.inv > :first-child {
-        grid-column: 2 / span 2; } }
-  @media (min-width: 787px) {
-    .comp.txtwimg.col2 {
       grid-template-columns: repeat(2, 1fr); }
       .comp.txtwimg.col2 > :first-child {
+        grid-row: 1;
         grid-column: 1; }
       .comp.txtwimg.col2.inv > :first-child {
         grid-column: 2; } }
