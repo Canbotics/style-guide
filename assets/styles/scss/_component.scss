@@ -155,24 +155,10 @@
 
         &.col2 {
             @media(min-width: 545px) {
-                grid-template-columns: repeat(3, 1fr);
- 
-                > :first-child {
-                    grid-row: 1;
-                    grid-column: 1 / span 2;
-                }
-
-                &.inv {
-                    > :first-child {
-                        grid-column: 2 / span 2;
-                    }
-                }
-            }
-
-            @media(min-width: 787px) {
                 grid-template-columns: repeat(2, 1fr);
 
                 > :first-child {
+                    grid-row: 1;
                     grid-column: 1;
                 }
 
