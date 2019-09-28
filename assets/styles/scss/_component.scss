@@ -120,9 +120,13 @@
         }
     }
 
-    &.txtwimg {
+    &.txtimg {
         display: grid;
+        grid-auto-columns: 1fr;
         grid-gap: 0 map-get($gridGap, 'column' );
+        grid-template-areas:
+            "image"
+            "text";
 
         h3, h4 {
             margin: 0 0 .25em;
@@ -145,85 +149,49 @@
         }
 
         > :first-child {
-            grid-row: 2;
+            grid-area: text;
             align-self: center;
         }
 
         > :last-child {
-            grid-row: 1;
+            grid-area: image;
         }
 
         &.col2 {
             @media(min-width: 545px) {
-                grid-template-columns: repeat(2, 1fr);
-
-                > :first-child {
-                    grid-row: 1;
-                    grid-column: 1;
-                }
+                grid-template-areas: "text image";
 
                 &.inv {
-                    > :first-child {
-                        grid-column: 2;
-                    }
+                    grid-template-areas: "image text";
                 }
             }
         }
 
         &.col3 {
             @media(min-width: 545px) {
-                grid-template-columns: repeat(2, 1fr);
-
                 &.col12 {                    
-                    > :first-child {
-                        grid-row: 1;
-
-                    }
+                    grid-template-areas: "text image";
 
                     &.inv {
-                        > :last-child {
-                            grid-column: 1;
-                        }
+                        grid-template-areas: "image text";
                     }
                 }
 
                 &.col21 {
-                    grid-template-columns: repeat(3, 1fr);
-    
-                    > :first-child {
-                        grid-row: 1;
-                        grid-column: 1 / span 2;
-                    }
+                    grid-template-areas: "text text image";
 
                     &.inv {
-                        > :first-child {
-                            grid-column: 2 / span 2;
-                        }
+                        grid-template-areas: "image text text";
                     }
                 }
             }
 
             @media(min-width: 787px) {
-                grid-template-columns: repeat(3, 1fr);
-
                 &.col12 {
-                    > :last-child {
-                        grid-column: 2 / span 2;
-
-                    }
+                    grid-template-areas: "text image image";
 
                     &.inv {
-                        > :last-child {
-                            grid-column: 1 / span 2;
-                        }
-                    }
-                }
-
-                &.col21 {
-                    grid-template-columns: repeat(3, 1fr);
-
-                    > :first-child {
-                        grid-column: 1/span 2
+                        grid-template-areas: "image image text";
                     }
                 }
             }

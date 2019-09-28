@@ -228,66 +228,54 @@ p {
         margin: .75em 16px .25em; }
       .comp.coln header + div, .comp.coln footer {
         margin: 0 16px; } }
-.comp.txtwimg {
+.comp.txtimg {
   display: grid;
-  grid-gap: 0 16px; }
-  .comp.txtwimg h3, .comp.txtwimg h4 {
+  grid-auto-columns: 1fr;
+  grid-gap: 0 16px;
+  grid-template-areas: "image" "text"; }
+  .comp.txtimg h3, .comp.txtimg h4 {
     margin: 0 0 .25em; }
-  .comp.txtwimg header + div > :first-child {
+  .comp.txtimg header + div > :first-child {
     margin-top: 0; }
-  .comp.txtwimg picture {
+  .comp.txtimg picture {
     display: block; }
-  .comp.txtwimg img {
+  .comp.txtimg img {
     display: block;
     width: 100%;
     height: auto; }
-  .comp.txtwimg > :first-child {
-    grid-row: 2;
+  .comp.txtimg > :first-child {
+    grid-area: text;
     align-self: center; }
-  .comp.txtwimg > :last-child {
-    grid-row: 1; }
+  .comp.txtimg > :last-child {
+    grid-area: image; }
   @media (min-width: 545px) {
-    .comp.txtwimg.col2 {
-      grid-template-columns: repeat(2, 1fr); }
-      .comp.txtwimg.col2 > :first-child {
-        grid-row: 1;
-        grid-column: 1; }
-      .comp.txtwimg.col2.inv > :first-child {
-        grid-column: 2; } }
+    .comp.txtimg.col2 {
+      grid-template-areas: "text image"; }
+      .comp.txtimg.col2.inv {
+        grid-template-areas: "image text"; } }
   @media (min-width: 545px) {
-    .comp.txtwimg.col3 {
-      grid-template-columns: repeat(2, 1fr); }
-      .comp.txtwimg.col3.col12 > :first-child {
-        grid-row: 1; }
-      .comp.txtwimg.col3.col12.inv > :last-child {
-        grid-column: 1; }
-      .comp.txtwimg.col3.col21 {
-        grid-template-columns: repeat(3, 1fr); }
-        .comp.txtwimg.col3.col21 > :first-child {
-          grid-row: 1;
-          grid-column: 1 / span 2; }
-        .comp.txtwimg.col3.col21.inv > :first-child {
-          grid-column: 2 / span 2; } }
+    .comp.txtimg.col3.col12 {
+      grid-template-areas: "text image"; }
+      .comp.txtimg.col3.col12.inv {
+        grid-template-areas: "image text"; }
+    .comp.txtimg.col3.col21 {
+      grid-template-areas: "text text image"; }
+      .comp.txtimg.col3.col21.inv {
+        grid-template-areas: "image text text"; } }
   @media (min-width: 787px) {
-    .comp.txtwimg.col3 {
-      grid-template-columns: repeat(3, 1fr); }
-      .comp.txtwimg.col3.col12 > :last-child {
-        grid-column: 2 / span 2; }
-      .comp.txtwimg.col3.col12.inv > :last-child {
-        grid-column: 1 / span 2; }
-      .comp.txtwimg.col3.col21 {
-        grid-template-columns: repeat(3, 1fr); }
-        .comp.txtwimg.col3.col21 > :first-child {
-          grid-column: 1/span 2; } }
+    .comp.txtimg.col3.col12 {
+      grid-template-areas: "text image image"; }
+      .comp.txtimg.col3.col12.inv {
+        grid-template-areas: "image image text"; } }
   @media (max-width: 544px) {
-    .comp.txtwimg h3, .comp.txtwimg h4 {
+    .comp.txtimg h3, .comp.txtimg h4 {
       margin-top: .75em; } }
   @media (max-width: 512px) {
-    .comp.txtwimg {
+    .comp.txtimg {
       padding: 0; }
-      .comp.txtwimg h3, .comp.txtwimg h4 {
+      .comp.txtimg h3, .comp.txtimg h4 {
         margin: .75em 16px .25em; }
-      .comp.txtwimg header + div, .comp.txtwimg footer {
+      .comp.txtimg header + div, .comp.txtimg footer {
         margin: 0 16px; } }
 
 /*# sourceMappingURL=style.css.map */
