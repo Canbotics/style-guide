@@ -278,4 +278,13 @@ p {
       .comp.txtimg header + div, .comp.txtimg footer {
         margin: 0 16px; } }
 
+input + svg path {
+  fill: none; }
+
+input.validated:valid + svg .valid {
+  fill: #00D994; }
+
+input.validated:invalid + svg .invalid {
+  fill: #FF486E; }
+
 /*# sourceMappingURL=style.css.map */

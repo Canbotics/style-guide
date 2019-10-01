@@ -1,0 +1,13 @@
+
+
+input + svg path {
+    fill: none;
+}
+
+input.validated:valid + svg .valid {
+    fill: map-get(map-get($colors, 'state'), 'valid');
+}
+
+input.validated:invalid + svg .invalid {
+    fill: map-get(map-get($colors, 'state'), 'invalid');
+}
