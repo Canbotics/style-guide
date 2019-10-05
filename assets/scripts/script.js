@@ -64,6 +64,15 @@ $(document).ready(function() {
         }
 
         $(this).addClass('validated');
+    }).on('change', 'select, [type=checkbox]', function(event) {
+        $(this).addClass('validated');
+        $(this)[0].setCustomValidity('');
+
+        if (!$(this)[0].checkValidity()) {
+            $(this)[0].setCustomValidity($(this).attr('data-errblank'));
+        }
+
+        $('[data-for="' + $(this).attr('id') + '"]').text($(this)[0].validationMessage);
     }).on('submit', function(event) {
         if (!$(this)[0].checkValidity()) {
             event.preventDefault();
