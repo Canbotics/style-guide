@@ -17,6 +17,10 @@ $colors: (
         'siteHead': #DDD,
         'siteMain': none,
         'siteFoot': #DDD
+    ),
+    'state': (
+        'valid': #00D994,
+        'invalid': #FF486E
     )
 );
 
@@ -56,4 +60,4 @@ $colors: (
 
 
 
-@import 'structure', 'global', 'component';
+@import 'structure', 'global', 'components', 'forms';
